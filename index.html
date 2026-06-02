@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blue Frequency — Ocean Health Visualization</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-wave">≋</span>
+        <span class="logo-text">Blue Frequency</span>
+      </div>
+      <p class="tagline">Ocean health, rendered in blue</p>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="region-nav" aria-label="Select ocean region">
+      <button class="region-btn active" data-region="pacific">Pacific</button>
+      <button class="region-btn" data-region="atlantic">Atlantic</button>
+      <button class="region-btn" data-region="arctic">Arctic</button>
+      <button class="region-btn" data-region="coral">Coral Triangle</button>
+      <button class="region-btn" data-region="deep">Deep Sea</button>
+    </section>
+
+    <section class="canvas-section">
+      <canvas id="ocean" aria-label="Animated ocean visualization"></canvas>
+      <div class="canvas-overlay">
+        <span id="region-label">Pacific Ocean</span>
+        <span id="health-badge">72% healthy</span>
+      </div>
+    </section>
+
+    <section class="metrics" id="metrics" aria-label="Ocean health metrics"></section>
+
+    <section class="info-panel" id="info-panel">
+      <h2 id="info-name">Pacific Ocean</h2>
+      <p id="info-desc"></p>
+    </section>
+
+    <section class="color-key" aria-label="Color key">
+      <p class="key-label">What the color means</p>
+      <div class="key-swatches">
+        <div class="swatch"><div class="swatch-color" style="background:#042C53;"></div><span>Pristine</span></div>
+        <div class="swatch"><div class="swatch-color" style="background:#185FA5;"></div><span>Healthy</span></div>
+        <div class="swatch"><div class="swatch-color" style="background:#378ADD;"></div><span>Moderate</span></div>
+        <div class="swatch"><div class="swatch-color" style="background:#85B7EB;"></div><span>Stressed</span></div>
+        <div class="swatch"><div class="swatch-color" style="background:#b8c8d4;"></div><span>Critical</span></div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>Data representative of global ocean research averages. Built for the <a href="https://www.instructables.com/contest/rainbow26" target="_blank">Colors of the Rainbow</a> &amp; Bow Seat Ocean Awareness contests.</p>
+    </footer>
+
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
